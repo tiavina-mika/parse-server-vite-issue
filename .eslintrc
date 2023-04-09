@@ -1,0 +1,63 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint", "react-hooks"],
+  "extends": [
+    "plugin:prettier/recommended",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "rules": {
+    "ordered-imports": 0
+  },
+  "overrides": [
+    {
+      "files": ["src/**/*.{ts,tsx}", "*.{ts,tsx}"],
+      "extends": [
+        "plugin:@typescript-eslint/recommended"
+      ],
+      "rules": {
+        // "max-len": ["warn", { "code": 100 }],
+        "@typescript-eslint/ban-ts-comment": "off",
+        "@typescript-eslint/explicit-function-return-type": "off",
+        "@typescript-eslint/no-inferrable-type": "off",
+        "no-unused-vars": "off",
+        "@typescript-eslint/no-unused-vars": ["warn"],
+        "no-extra-boolean-cast": "off",
+        "@typescript-eslint/no-unnecessary-type-arguments": "error",
+        "@typescript-eslint/no-explicit-any": "off",
+        "@typescript-eslint/prefer-nullish-coalescing": "error",
+        "@typescript-eslint/prefer-optional-chain": "error",
+        "@typescript-eslint/explicit-module-boundary-types": "error",
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": "warn",
+        "react/react-in-jsx-scope": "off",
+        "prettier/prettier": "warn"
+      },
+      "parser": "@typescript-eslint/parser",
+      "parserOptions": {
+        "tsconfigRootDir": "./",
+        "project": "./tsconfig.json"
+      }
+    }
+  ],
+  "settings": {
+    "import/resolver": {
+      "babel-module": {
+        "alias": {
+          "@hooks": "./src/hooks",
+          "@redux": "./src/redux",
+          "@utils": "./src/utils",
+          "types": "./src/types",
+          "@components": "./src/components",
+          "@containers": "./src/containers",
+          "@config": "./src/config",
+          "@routes": "./src/routes",
+          "@styles": "./src/styles",
+          "assets": "./public"
+        }
+      }
+    }
+  }
+}
