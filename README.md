@@ -1,7 +1,7 @@
 # parse-server-vite-issue
 Parse server issue with vite when running the server
 
-W hen running the server with `yarn dev`, got this error:
+W hen running the server with `yarn dev`, got this error in the browser console:
 inherits.js:9 Uncaught TypeError: Super expression must either be null or a function
     at _inherits (inherits.js:9:11)
     at LiveQuerySubscription.js:149:18
